@@ -1,0 +1,216 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:VDD #PWR?
+U 1 1 5DAE59DB
+P 5100 2050
+F 0 "#PWR?" H 5100 1900 50  0001 C CNN
+F 1 "VDD" H 5117 2223 50  0000 C CNN
+F 2 "" H 5100 2050 50  0001 C CNN
+F 3 "" H 5100 2050 50  0001 C CNN
+	1    5100 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5DAE622C
+P 6100 3600
+F 0 "#PWR?" H 6100 3350 50  0001 C CNN
+F 1 "GND" H 6105 3427 50  0000 C CNN
+F 2 "" H 6100 3600 50  0001 C CNN
+F 3 "" H 6100 3600 50  0001 C CNN
+	1    6100 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x05 ESP32
+U 1 1 5DAE948C
+P 3950 2550
+F 0 "ESP32" H 3868 2875 50  0000 C CNN
+F 1 "Conn_01x05" H 4030 2501 50  0001 L CNN
+F 2 "" H 3950 2550 50  0001 C CNN
+F 3 "~" H 3950 2550 50  0001 C CNN
+	1    3950 2550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4150 2350 5100 2350
+Wire Wire Line
+	4150 2450 5100 2450
+Wire Wire Line
+	4150 2550 5350 2550
+Wire Wire Line
+	5350 2550 5350 2250
+Wire Wire Line
+	5350 2250 6150 2250
+Wire Wire Line
+	5100 2050 5100 2350
+$Comp
+L Device:LED D?
+U 1 1 5DAEF9DA
+P 8100 2450
+F 0 "D?" H 8093 2195 50  0000 C CNN
+F 1 "LED" H 8093 2286 50  0000 C CNN
+F 2 "" H 8100 2450 50  0001 C CNN
+F 3 "~" H 8100 2450 50  0001 C CNN
+	1    8100 2450
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VDD #PWR?
+U 1 1 5DAF083E
+P 8800 2200
+F 0 "#PWR?" H 8800 2050 50  0001 C CNN
+F 1 "VDD" H 8817 2373 50  0000 C CNN
+F 2 "" H 8800 2200 50  0001 C CNN
+F 3 "" H 8800 2200 50  0001 C CNN
+	1    8800 2200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 2450 7950 2450
+Wire Wire Line
+	8250 2450 8800 2450
+Wire Wire Line
+	8800 2450 8800 2200
+$Comp
+L HCS301_SN:HCS301_SN U?
+U 1 1 5DAE6E83
+P 6850 2450
+F 0 "U?" H 6850 3015 50  0001 C CNN
+F 1 "HCS301" H 6850 2923 50  0000 C CNN
+F 2 "SOIC127P600X175-8N" H 6850 2450 50  0001 L BNN
+F 3 "None" H 6850 2450 50  0001 L BNN
+F 4 "Unavailable" H 6850 2450 50  0001 L BNN "Field4"
+F 5 "HCS301/SN" H 6850 2450 50  0001 L BNN "Field5"
+F 6 "SOIC-8 Microchip" H 6850 2450 50  0001 L BNN "Field6"
+F 7 "HCS301 Series 13 V 15 Functions KEELOQ® Code Hopping Encoder - SOIC-8" H 6850 2450 50  0001 L BNN "Field7"
+F 8 "Microchip" H 6850 2450 50  0001 L BNN "Field8"
+	1    6850 2450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 2250 7750 2250
+Wire Wire Line
+	7750 2250 7750 3300
+Text Label 4150 2750 0    50   ~ 0
+PWM_PIN
+Text Label 4150 2550 0    50   ~ 0
+VDD_PIN
+Text Label 4150 2450 0    50   ~ 0
+GND
+Text Label 4150 2350 0    50   ~ 0
+3v
+Text Label 4150 2650 0    50   ~ 0
+CLK_PIN
+Wire Wire Line
+	4150 2750 4800 2750
+Wire Wire Line
+	4800 2750 4800 3300
+Wire Wire Line
+	4800 3300 7750 3300
+$Comp
+L Device:R_US R?
+U 1 1 5DAFDDD8
+P 5750 3050
+F 0 "R?" V 5955 3050 50  0001 C CNN
+F 1 "R10k" V 5863 3050 50  0001 C CNN
+F 2 "" V 5790 3040 50  0001 C CNN
+F 3 "~" H 5750 3050 50  0001 C CNN
+	1    5750 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5DB03A01
+P 5600 3050
+F 0 "R?" V 5805 3050 50  0001 C CNN
+F 1 "R10k" V 5713 3050 50  0001 C CNN
+F 2 "" V 5640 3040 50  0001 C CNN
+F 3 "~" H 5600 3050 50  0001 C CNN
+	1    5600 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5DB03DD3
+P 5450 3050
+F 0 "R?" V 5655 3050 50  0001 C CNN
+F 1 "R10k" V 5563 3050 50  0001 C CNN
+F 2 "" V 5490 3040 50  0001 C CNN
+F 3 "~" H 5450 3050 50  0001 C CNN
+	1    5450 3050
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R_US R?
+U 1 1 5DB047DE
+P 5300 3050
+F 0 "R?" V 5505 3050 50  0001 C CNN
+F 1 "R10k" V 5413 3050 50  0001 C CNN
+F 2 "" V 5340 3040 50  0001 C CNN
+F 3 "~" H 5300 3050 50  0001 C CNN
+	1    5300 3050
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6150 2750 5750 2750
+Wire Wire Line
+	5750 2750 5750 2900
+Wire Wire Line
+	6150 2650 5300 2650
+Wire Wire Line
+	5600 2900 5600 2550
+Wire Wire Line
+	5600 2550 6150 2550
+Wire Wire Line
+	6150 2450 5450 2450
+Wire Wire Line
+	5450 2450 5450 2900
+Wire Wire Line
+	5300 2900 5300 2650
+Connection ~ 5300 2650
+Wire Wire Line
+	5300 2650 4150 2650
+Wire Wire Line
+	6150 2950 6100 2950
+Wire Wire Line
+	6100 2950 6100 3400
+Wire Wire Line
+	6100 3400 5750 3400
+Wire Wire Line
+	5750 3400 5750 3200
+Connection ~ 6100 3400
+Wire Wire Line
+	6100 3400 6100 3600
+Wire Wire Line
+	5750 3400 5600 3400
+Wire Wire Line
+	5300 3400 5300 3200
+Connection ~ 5750 3400
+Wire Wire Line
+	5450 3200 5450 3400
+Connection ~ 5450 3400
+Wire Wire Line
+	5450 3400 5300 3400
+Wire Wire Line
+	5600 3200 5600 3400
+Connection ~ 5600 3400
+Wire Wire Line
+	5600 3400 5450 3400
+Text Label 5100 3200 0    50   ~ 0
+10k
+$EndSCHEMATC
