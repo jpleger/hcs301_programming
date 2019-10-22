@@ -1,6 +1,6 @@
-# Programming HCS301 devices
+# Programming HCS301/KeeLoq devices
 
-Example arduino sketch for programming an HCS301 using a ESP32. This is just an example and the code is intended to be integrated however someone sees fit... However, it would be unwise to use the HCS301s in a modern device.
+Example arduino sketch for programming an HCS301/KeeLoq device using a ESP32. This is just an example and the code is intended to be integrated however someone sees fit... However, it would be very unwise to use an HCS301 or other KeeLoq ICs in a modern device.
 
 ## ESP32/Display Config
 
@@ -12,7 +12,7 @@ I chose to use an esp32 for this, with an integrated OLED display, because it wa
 
 ## Programming Device
 
-On startup, the device must enter programming mode, then you send 12 words to configure the HCS controller. Once it enters programming mode it will wipe the device, so there is a bit of a delay.
+On startup, the device must enter programming mode, then you send 12 words to configure the HCS controller. Once it enters programming mode it will wipe the device, so there is a bit of a delay. Below are some example logic analyzer captures using a saleae device.
 
 ![Startup](img/startup.png)
 
