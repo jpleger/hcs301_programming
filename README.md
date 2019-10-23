@@ -1,6 +1,6 @@
 # Programming HCS301/KeeLoq devices
 
-Example arduino sketch for programming an HCS301/KeeLoq device using a ESP32. This is just an example and the code is intended to be integrated however someone sees fit... However, it would be very unwise to use an HCS301 or other KeeLoq ICs in a modern device.
+Example [arduino sketch](hcs301_programming/hcs301_programming.ino) for programming an HCS301/KeeLoq device using a ESP32. This is just an example and the code is intended to be integrated however someone sees fit... However, it would be very unwise to use an HCS301 or other KeeLoq ICs in a modern device.
 
 ## ESP32/Display Config
 
