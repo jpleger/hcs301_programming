@@ -189,6 +189,7 @@ void loop() {
   btn_program = digitalRead(PROGRAM_PIN);
   btn_execute = digitalRead(EXECUTE_PIN);
   if (btn_program == HIGH) {
+    int success = 1;
     u8x8.clearDisplay();
     u8x8.drawString(0, 0, "Writing EEPROM");
     u8x8.drawString(0, 1, "...");
@@ -206,14 +207,27 @@ void loop() {
     print_eeprom_buffer(eeprom_buffer);
     Serial.print("Writing EEPROM\n");
     write_eeprom_buffer(eeprom_buffer, vbuffer);
+    for (int i = 0; i < EEPROM_SIZE; i++){
+      if (eeprom_buffer[i] != vbuffer[i]) {
+        success = 0;
+      }
+    }
     Serial.print("HCS301 EEPROM verification:\n");
     print_eeprom_buffer(vbuffer);
     Serial.print("...\n");
+    if (success == 0) {
+      Serial.print("!! EEPROM CHECK FAILURE\n");
+      u8x8.drawString(0, 2, "! CHECK FAILED");
+    } else {
+      Serial.print("EEPROM check OK\n");
+      u8x8.drawString(0, 2, "EEPROM OK");
+    }
+    Serial.print("...\n");
     Serial.print("Done.\n");
-    u8x8.drawString(0, 2, "Done!");
+    u8x8.drawString(0, 3, "Done!");
     // Increment Serial Number
     serialnumber += 1;
-    delay(2000);
+    delay(3000);
     u8x8.clearDisplay();
   }
   if (btn_execute == HIGH) {
